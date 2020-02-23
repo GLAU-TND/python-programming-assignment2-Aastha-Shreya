@@ -1,3 +1,5 @@
+
+Q.-1
 #To arrange the entered list in such that it forms a circle.
 
 l = eval(input())
@@ -11,6 +13,33 @@ for i in range(len(l)):
 print(l)
 
 
+
+Q.-2
+#To make arrangement of integers such that they form greatest integer.
+l = eval(input())
+l = list(map(str,l))
+nl = []; k = 0; nll = []
+#seperates single integer from long integers
+for i in l:
+    if len(i) == 1:
+        nl.append(i)
+    else:
+        nll.append(i)
+#this sorts long integer elements lexicographically.
+nll = sorted(nll, key = str)
+#This fits the single integers at proper position.
+for i in nl:
+    for j in nll:
+        if j.startswith(i):
+            k = nll.index(j)
+nll = nll[::-1]
+d = ''.join(nll)
+print(int(d))
+
+
+
+
+Q.-3
 # To print the maximum consecutive 1's from the binary of the entered integer.
 n = int(input())
 b = bin(n)
