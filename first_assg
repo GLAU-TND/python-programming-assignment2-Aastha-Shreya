@@ -1,0 +1,9 @@
+l = eval(input())
+temp = ''
+for i in range(len(l)):
+  for j in range(i+1,(len(l)-1):
+    if l[j][0] != l[i][-1]:
+      temp =l[j]
+      l[j] = l[j+1]
+      l[j+1] = temp
+print(l)
