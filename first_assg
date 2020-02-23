@@ -1,3 +1,5 @@
+#To arrange the entered list in such that it forms a circle.
+
 l = eval(input())
 temp = ''
 for i in range(len(l)):
@@ -7,3 +9,17 @@ for i in range(len(l)):
       l[j] = l[j+1]
       l[j+1] = temp
 print(l)
+
+
+# To print the maximum consecutive 1's from the binary of the entered integer.
+n = int(input())
+b = bin(n)
+c = str(b)
+nl = 0
+
+for i in range(len(b)):
+    if '1'*i in c:
+        nl = i
+    else:
+        continue
+print(nl)
