@@ -31,7 +31,7 @@ nll = sorted(nll, key = str)
 for i in nl:
     for j in nll:
         if j.startswith(i):
-            k = nll.index(j)
+            k = nll.rindex(j)
     nll.insert(k+1,i)
 nll = nll[::-1]
 d = ''.join(nll)
